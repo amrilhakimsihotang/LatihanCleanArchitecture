@@ -2,10 +2,8 @@ package com.amrilhs.latihancleanarchitecture.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.amrilhs.latihancleanarchitecture.data.MessageDataSource
 import com.amrilhs.latihancleanarchitecture.di.Injection
 import com.amrilhs.latihancleanarchitecture.domain.MessageUseCase
-import java.lang.IllegalArgumentException
 
 class MainViewModelFactory(
     private var messageUseCase: MessageUseCase

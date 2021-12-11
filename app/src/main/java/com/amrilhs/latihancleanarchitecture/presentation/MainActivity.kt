@@ -1,10 +1,8 @@
 package com.amrilhs.latihancleanarchitecture.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.Observer
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.amrilhs.latihancleanarchitecture.R
 import com.amrilhs.latihancleanarchitecture.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val factory = MainViewModelFactory.getInstance()
         val viewModel = ViewModelProvider(this,factory)[MainViewModel::class.java]
         viewModel.setName("Dicod")
-        viewModel.message.observe(this, Observer {
+        viewModel.message.observe(this, {
             binding.tvWelcome.text =it.welcomeMessage
         })
     }
